@@ -8,7 +8,7 @@ import * as BooksAPI from '../BooksAPI'
 import Book from './Book'
 
 // Import react-router-dom
-import { BrowserRouter, Route, Link } from 'react-router-dom'
+import { Link } from 'react-router-dom'
 
 // Component Search
 class Search extends React.Component {

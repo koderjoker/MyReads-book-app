@@ -8,7 +8,7 @@ import Shelf from './Shelf'
 import * as BooksAPI from '../BooksAPI'
 
 // Import react-router-dom
-import { BrowserRouter, Route, Link } from 'react-router-dom'
+import { Link } from 'react-router-dom'
 
 // Component Home
 class Home extends React.Component {
