@@ -50,8 +50,15 @@ class Search extends React.Component {
         if(response.error && response.items) {
           return this.setState({ searchResults: [] });
         }
-        // Else return response
+        // Loop through search results, if preexisting on home page make sure it has same shelf
         else {
+          response.forEach((book,index) => {
+            this.state.bookDisplay.forEach((shelvedBook) => {
+              if (book.id === shelvedBook.id) {
+                book.shelf = shelvedBook.shelf
+              }
+            })
+          })
           return this.setState({ searchResults: response });
         }
       });
