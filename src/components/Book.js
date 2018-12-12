@@ -3,24 +3,28 @@ import React from 'react';
 
 // Component Book
 class Book extends React.Component {
+
   render() {
     return (
-      <div className="book">
-        <div className="book-top">
-          <div className="book-cover" style={{ width: 128, height: 188, backgroundImage: 'url("http://books.google.com/books/content?id=yDtCuFHXbAYC&printsec=frontcover&img=1&zoom=1&imgtk=AFLRE72RRiTR6U5OUg3IY_LpHTL2NztVWAuZYNFE8dUuC0VlYabeyegLzpAnDPeWxE6RHi0C2ehrR9Gv20LH2dtjpbcUcs8YnH5VCCAH0Y2ICaKOTvrZTCObQbsfp4UbDqQyGISCZfGN&source=gbs_api")' }}></div>
-          <div className="book-shelf-changer">
-            <select>
-              <option value="move" disabled>Move to...</option>
-              <option value="currentlyReading">Currently Reading</option>
-              <option value="wantToRead">Want to Read</option>
-              <option value="read">Read</option>
-              <option value="none">None</option>
-            </select>
+      <li>
+        <div className="book">
+          <div className="book-top">
+            <div className="book-cover" style={{ width: 128, height: 192, backgroundImage: `url("${ this.props.book.imageLinks.thumbnail }")`}}></div>
+            <div className="book-shelf-changer">
+              {/*Shelf value sent as book prop for shelf status. If value is changed call changeShelf and send book and new select menu value as params*/}
+              <select value={ this.props.book.shelf } onChange={(event) => {this.props.changeShelf(this.props.book, event.target.value);}}>
+                <option value="move" disabled>Move to...</option>
+                <option value="currentlyReading">Currently Reading</option>
+                <option value="wantToRead">Want to Read</option>
+                <option value="read">Read</option>
+                <option value="none">None</option>
+              </select>
+            </div>
           </div>
+          <div className="book-title">{ this.props.book.title }</div>
+          <div className="book-authors">{ this.props.book.authors }</div>
         </div>
-        <div className="book-title">Ender's Game</div>
-        <div className="book-authors">Orson Scott Card</div>
-      </div>
+      </li>
     );
   }
 }

@@ -17,6 +17,7 @@ export const get = (bookId) =>
     .then(res => res.json())
     .then(data => data.book)
 
+// Get books from API
 export const getAll = () =>
   fetch(`${api}/books`, { headers })
     .then(res => res.json())
