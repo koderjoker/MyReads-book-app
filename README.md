@@ -1,6 +1,6 @@
 # MyReads Project
 
-Built on starter code from (Udacity)[https://github.com/udacity/reactnd-project-myreads-starter]
+Built on starter code from [Udacity](https://github.com/udacity/reactnd-project-myreads-starter)
 
 General ideas for implementation taken from Udacity's react section, react's and react-router's documentation and Ryan Waite's Webinar
 
