@@ -24,4 +24,4 @@ It allows the the user to build a book list of their own with books separated ac
 
 ### Note
 * Built on starter code from [Udacity](https://github.com/udacity/reactnd-project-myreads-starter)
-* General ideas for implementation taken from Udacity's react section, react's and react-router's documentation and Ryan Waite's Webinar
+* General ideas for implementation taken from Udacity's react section, react's and react-router's documentation and Udacity's webinars
